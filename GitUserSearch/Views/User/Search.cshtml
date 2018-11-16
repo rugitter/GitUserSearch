@@ -1,0 +1,26 @@
+﻿@model Octokit.User
+
+@{
+    ViewData["Title"] = "Search User";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Please input github username</h4>
+    <form asp-controller="User" asp-action="Search" method="get">
+        <p>
+            User Name: <input type="text" placeholder="User Name" name="username">
+            <input type="submit" value="Search" />
+        </p>
+    </form>
+</div>
+
+<h3>Id: @Model.Id</h3>
+<h3>Login: @Model.Login</h3>
+<h3>Name: @Model.Name</h3>
+<h3>URL: @Model.Url</h3>
+
+<p> @Model.Followers followers love Big Wei in Github!</p>
+
+
+
