@@ -26,21 +26,36 @@ namespace GitUserSearch.Controllers
             return View();
         }
 
-        public ActionResult ShowAllUsers()
-        {
-            List<Models.User> users = new List<Models.User>();
-            var url = "https://api.github.com/users";
-
-            using (var webClient = new WebClient())
-            {
-                var rawJSON = string.Empty;
-                rawJSON = webClient.DownloadString(url);
+        //public async Task<IActionResult> ShowAllUsers()
+        //{
+        //    List<Octokit.User> users = new List<Octokit.User>();
+            
+        //    try
+        //    {
+        //        string url = "https://api.github.com/users";
+        //        var client = new HttpClient();
+        //        client.BaseAddress = new Uri("https://api.github.com/users");
+        //        //var client = new GitHubClient(new ProductHeaderValue("MyDemoApp"));
                 
-                //users = JsonConvert.DeserializeObject<List<User>>(rawJSON);
+        //            var response = await client.GetAsync($"/users");
+        //            response.EnsureSuccessStatusCode();
 
-                return View(users);
-            }
-        }
+        //            var stringResult = await response.Content.ReadAsStringAsync();
+        //            var rawWeather = JsonConvert.DeserializeObject<List<Octokit.User>>(stringResult);
+        //            return View(users);
+        //        }
+        //        catch (HttpRequestException httpRequestException)
+        //        {
+        //            return BadRequest($"Error getting weather from OpenWeather: {httpRequestException.Message}");
+        //        }
+
+        //        //var rawJSON = string.Empty;
+        //        //rawJSON = webClient.DownloadString(url);
+                
+        //        //users = JsonConvert.DeserializeObject<List<Octokit.User>>(rawJSON);
+
+        //        //return View(users);
+        //    }
 
 
         public IActionResult Error()

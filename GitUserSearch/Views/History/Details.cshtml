@@ -1,18 +1,10 @@
-﻿@model Octokit.User
+﻿@model GitUser
 
 @{
-    ViewData["Title"] = "Search User";
+    ViewData["Title"] = "User Details";
 }
 
 <h2>@ViewData["Title"]</h2>
-
-<div>
-    <form asp-controller="User" asp-action="Search" method="get">
-        <strong>Please input github user name: </strong>
-        <input type="text" placeholder="User Name" name="username">
-        <input type="submit" value="Search" />
-    </form>
-</div>
 <hr />
 
 <div>
@@ -54,18 +46,6 @@
         </dt>
         <dd>
             @Html.DisplayFor(Model => Model.Url)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Company)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Company)
         </dd>
 </div>
 

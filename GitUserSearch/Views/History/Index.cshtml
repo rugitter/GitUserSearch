@@ -1,0 +1,61 @@
+﻿@model IEnumerable<UserSearch>
+
+@{
+    ViewData["Title"] = "Search History";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<div>
+    <form asp-controller="Stores" asp-action="Details" asp-route-id="@ViewData["StoreID"]" method="get">
+        <p>
+            User Login: <input type="text" name="login" placeholder="Login">
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+</div>
+<hr />
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AccessDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User)
+                </th>
+                <th>
+                    Operation
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AccessDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Login)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.User.Id">More Detail</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+<div>
+    <a asp-controller="User" asp-action="Index">Back to Search</a>
+</div>

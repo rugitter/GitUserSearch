@@ -5,16 +5,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20181117070432_Initial.cs" />
+    <Compile Remove="Migrations\20181117070432_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20181117114550_Initial.cs" />
+    <Compile Remove="Migrations\20181117114550_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20181117115737_Initial.cs" />
+    <Compile Remove="Migrations\20181117115737_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20181117120738_Intial.cs" />
+    <Compile Remove="Migrations\20181117120738_Intial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
     <PackageReference Include="Octokit" Version="0.32.0" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\AllUsers\" />
   </ItemGroup>
 
 </Project>
