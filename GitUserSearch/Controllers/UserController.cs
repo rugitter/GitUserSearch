@@ -41,7 +41,7 @@ namespace GitUserSearch.Controllers
             }
             catch (NotFoundException objectNotFound)
             {
-                TempData["Message"] = "Failed to get user info : " + objectNotFound.Message;
+                TempData["Message"] = "No Valid User Found! Please Search Again!";
 
                 return Redirect("index");
             // BadRequest($"Error getting user info from github : {ObjectNotFoundException.Message}");

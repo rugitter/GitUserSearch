@@ -7,47 +7,64 @@
 <h2>@ViewData["Title"]</h2>
 <hr />
 
-<div>
-    <h4><strong>GitHub profile </strong> - @Html.DisplayFor(Model => Model.Name)</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Id)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Id)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Login)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Login)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Location)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Location)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Followers)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Followers)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(Model => Model.Url)
-        </dt>
-        <dd>
-            @Html.DisplayFor(Model => Model.Url)
-        </dd>
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">User ID: @Html.DisplayFor(Model => Model.Id)</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                <div class=" col-md-9 col-lg-9 ">
+                    <table class="table table-user-information">
+                        <tbody>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Id):</td>
+                                <td>@Html.DisplayFor(Model => Model.Id)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Login):</td>
+                                <td>@Html.DisplayFor(Model => Model.Login)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Name)</td>
+                                <td>@Html.DisplayFor(Model => Model.Name)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Location)</td>
+                                <td> @Html.DisplayFor(Model => Model.Location)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Followers)</td>
+                                <td>@Html.DisplayFor(Model => Model.Followers)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Url)</td>
+                                <td>@Html.DisplayFor(Model => Model.Url)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Email)</td>
+                                <td>@Html.DisplayFor(Model => Model.Email)</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.DisplayNameFor(Model => Model.Company)</td>
+                                <td>@Html.DisplayFor(Model => Model.Company)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <a asp-controller="History" class="btn btn-primary" asp-action="Index">Back</a>
+            <span class="pull-right">
+                <a asp-controller="User" class="btn btn-primary" asp-action="Index">Search Again</a>
+            </span>
+        </div>
+    </div>
 </div>
+
 
 
 
