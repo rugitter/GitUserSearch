@@ -6,12 +6,15 @@
 # Development process:
 Version 0: Read Github API documentation and Tested Github User API using Chrome and Postman.
            Both the user search API and all users API are working good.
+           
 Version 1: Utilized "Octokit" .NET package to implement the above functions.
            Octokit is a popular Github API package which implements most of the popular
            functions in several different languages.
+           
 Version 2: Re-design the Web App using MVC model to enable extra feature : Display Search history.
            All successful search will save the search-related data and the retrieved user details
            into a cloud database.
+           
 Version 3: Beautify the page.
            Import Bootstrap and jQuery.
            Add mininal CSS to each page.
